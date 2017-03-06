@@ -1,0 +1,17 @@
+﻿@using ContactManageMVC.View.Models
+@model ContactManageMVC.View.Models.ContactsInfoModel
+@{
+    ViewBag.Title = "Test";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Test</h2>
+
+@foreach (var item in Model.ContactsDictionary)
+{
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.ContactsDictionary[item.Key])
+       
+    </div>
+
+}
